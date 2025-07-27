@@ -8,6 +8,7 @@ RUN pip install --no-cache-dir pymupdf
 COPY extract_outline.py /app/extract_outline.py
 COPY entrypoint.sh /app/entrypoint.sh
 
+# Make entrypoint executable
 RUN chmod +x /app/entrypoint.sh
 
 ENTRYPOINT ["/app/entrypoint.sh"]
